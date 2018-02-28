@@ -1,0 +1,95 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+body{
+  background: rgba(0,0,0,0.9);
+}
+.upload{
+  position: absolute;
+  left: 50%;
+  margin-top: 135px;
+  margin-left: -250px;
+  width: 500px;
+  height: 200px;
+  border: 4px dashed #fff;
+}
+.upload p{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 170px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+.dropArea{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+}
+.uploadButton{
+  color: #fff;
+  background: #16a085;
+  border: none;
+  width: 508px;
+  height: 35px;
+  margin: 20px 0 0 -4px;
+  border-radius: 4px;
+  border-bottom: 4px solid #117A60;
+  transition: all .2s ease;
+  outline: none;
+}
+.uploadButton:hover{
+  background: #149174;
+  color: #0C5645;
+}
+.uploadButton:active{
+  border:0;
+}
+.label, h1, p{
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+
+.thumnail {
+  margin: 20px;
+}
+
+.thumnail ul {
+  list-style-type: none;
+  width: 500px;
+}
+
+.thumnail h3 {
+  color: #ffffff;
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.thumnail li img  {
+  float: left;
+  object-fit: contain;
+  margin: 0 15px 0 0;
+}
+
+.thumnail li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+.thumnail li {
+  padding: 10px;
+  overflow: auto;
+}
+
+.thumnail li:hover {
+  background: #eee;
+  cursor: pointer;
+}

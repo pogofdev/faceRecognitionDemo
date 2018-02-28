@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div.thumnail
+        ul
+            for filePath in filePaths
+                li
+                    img(src='data:image/jpeg;base64, #{filePath.base64Img}')
+                    h3 #{filePath.name} - #{filePath.fileName}
+
+        form(action='start', method='GET')
+            button.uploadButton(type='submit') Start training

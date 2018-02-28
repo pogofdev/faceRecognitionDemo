@@ -1,0 +1,34 @@
+extends layout
+block script
+    script( type='text/javascript' src='https://code.jquery.com/jquery-3.3.1.min.js')
+block content
+    h1= title
+    p Welcome to #{title}
+
+    //if errors
+    //    ul
+    //        each val, index in errors
+    //            li= index + ': ' + val.msg
+
+    form.upload(action='whoisit', method='POST' enctype='multipart/form-data')
+        input.dropArea(type='file', name='userPhoto' accept="image/x-png,image/gif,image/jpeg")
+        p Drag your file here or click in this area.
+        button.uploadButton(type='submit') Upload
+
+    script.
+        $(document).ready(function(){
+            $('form input').change(function () {
+                $('form p').text(this.files.length + " file(s) selected");
+            });
+        });
+    //form(method='POST' action='train')
+    //    if errors && errors['name_field']
+    //        label(for='name_field') Enter name: #{errors['name_field'].msg}
+    //    else
+    //        label(for='name_field') Enter name:
+    //    input#name_field(type='text' name='name_field' value='Default name for team.')
+    //    br
+    //    br
+    //    label(for='team_email') Enter email:
+    //        input#team_email(type='text' name='team_email' value='Default email for team.')
+    //    input(type='submit' value='OK')

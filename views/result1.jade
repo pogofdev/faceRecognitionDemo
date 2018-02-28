@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    div.thumnail
+            for filePath in filePaths
+                    img(style='width:100%;' src='data:image/jpeg;base64, #{filePath.base64Img}')
+                    h3 #{filePath.name} - #{filePath.fileName}
+    form(action='whoisit', method='GET')
+        button.uploadButton(type='submit') Start again
+    form(action='train', method='GET')
+        button.uploadButton(type='submit') Train more
